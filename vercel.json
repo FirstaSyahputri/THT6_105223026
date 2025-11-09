@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/portofolio-bootstrap.html" },
+    { "source": "/", "destination": "/portofolio-tailwind.html" }
+  ]
+}
