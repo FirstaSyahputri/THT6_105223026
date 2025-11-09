@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Firsta - Tailwind</title>
+
+
+  <!-- link tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ff4d6d',
+            secondary: '#ff4d6d',
+            panel: '#161b22',
+          },
+        },
+      },
+    };
+  </script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-[theme('colors.pageBg')] text-white antialiased">
+  <header class="bg-[theme('colors.panel')] border-b-2 border-primary">
+  <div class="container mx-auto px-4">
+  <div class="flex items-center justify-between h-16">
+
+      <a href="#home" class="text-primary font-semibold text-lg">Firsta</a>
+
+      <nav class="hidden md:flex space-x-6">
+          <a href="#home" class="hover:text-primary">Home</a>
+          <a href="#about" class="hover:text-primary">About</a>
+          <a href="#experience" class="hover:text-primary">Experience</a>
+          <a href="#organization" class="hover:text-primary">Organization</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </nav>
+
+    <button id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 rounded bg-white/10 hover:bg-white/20">
+
+          <svg id="icon-open" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="icon-close" class="w-6 h-6 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+    <div id="mobile-menu" class="md:hidden hidden pb-4">
+
+      <!-- pengaturan navbar agar bisa diakses saat layar kecil -->
+        <nav class="flex flex-col space-y-2">
+          <a href="#home" class="hover:text-primary">Home</a>
+          <a href="#about" class="hover:text-primary">About</a>
+          <a href="#experience" class="hover:text-primary">Experience</a>
+          <a href="#organization" class="hover:text-primary">Organization</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container mx-auto px-4 py-10">
+
+<!-- bio -->
+  <section id="home" class="mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- Foto -->
+     <div class="flex justify-center md:justify-end">
+          <div class="bg-[theme('colors.panel')] border border-primary rounded-xl p-4 shadow-sm w-64 text-center">
+            <img src="image.jpg" alt="Foto Profil"
+                 class="mx-auto rounded-full w-44 h-44 object-cover border-2 border-primary" />
+            <div class="mt-3">
+              <h3 class="font-bold text-lg text-primary">Firsta Khory Syahputri</h3>
+              <p class="text-sm text-neutral-300 mt-1">Mahasiswa Ilmu Komputer — Web & Data Enthusiast</p>
+            </div>
+          </div>
+        </div>
+
+    <!-- Teks Bio -->
+    <div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary">Firsta Khory Syahputri</h2>
+      <p class="mt-4 text-neutral-300">
+        Mahasiswa <strong>Universitas Pertamina</strong> jurusan <strong>Ilmu Komputer Angkatan 2023</strong>.
+        Saya memiliki minat di bidang <em>web development</em>, <em>data analysis</em>, dan <em>user interface design</em>.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- about -->
+  <section id="about" class="mb-12 text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">About Me</h2>
+      <p class="mx-auto max-w-3xl text-neutral-300">
+        Saya adalah individu yang memiliki semangat tinggi untuk terus belajar dan mengembangkan diri. Saya mampu bekerja sama dengan baik dalam tim, serta memiliki kemampuan analisis dan pemahaman yang kuat baik dalam konteks pembelajaran maupun pekerjaan. Fokus utama saya adalah pada bidang <strong>software engineering</strong> dan <strong>analisis data</strong>, di mana saya berkomitmen untuk terus meningkatkan kemampuan teknis dan profesional guna memberikan solusi yang efektif serta inovatif.
+      </p>
+  </section>
+
+  <!-- gallery -->
+  <section id="gallery" class="mb-12">
+      <h2 class="text-2xl font-bold text-primary text-center mb-6">Galeri Proyek</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- contoh 6 item -->
+        <div class="bg-[theme('colors.panel')] rounded-lg overflow-hidden border border-primary shadow-sm">
+          <img src="image1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Kegiatan 1</h3>
+            </div>
+        </div>
+
+        <div class="bg-[theme('colors.panel')] rounded-lg overflow-hidden border border-primary shadow-sm">
+          <img src="image2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Kegiatan 2</h3>
+            </div>
+        </div>
+
+        <div class="bg-[theme('colors.panel')] rounded-lg overflow-hidden border border-primary shadow-sm">
+          <img src="image3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Kegiatan 3</h3>
+            </div>
+        </div>
+
+        <div class="bg-[theme('colors.panel')] rounded-lg overflow-hidden border border-primary shadow-sm">
+          <img src="image4.jpg" alt="Project 4" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Kegiatan 4</h3>
+            </div>
+        </div>
+
+        <div class="bg-[theme('colors.panel')] rounded-lg overflow-hidden border border-primary shadow-sm">
+          <img src="image5.jpg" alt="Project 5" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Kegiatan 5</h3>
+            </div>
+        </div>
+
+        <div class="bg-[theme('colors.panel')] rounded-lg overflow-hidden border border-primary shadow-sm">
+          <img src="image6.jpg" alt="Project 6" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold">Kegiatan 6</h3>
+            </div>
+        </div>
+      </div>
+    </section>
+
+<!-- experience -->
+  <section id="experience" class="mb-12 text-center">
+      <h2 class="text-2xl font-bold text-primary mb-4">Professional Experience</h2>
+      <p class="text-neutral-300 max-w-3xl mx-auto">
+        Tahun <strong>2024 &amp; 2025</strong>, saya melaksanakan program magang di
+        <strong>PT Jasamarga Toll Operator (Cibitung-Cilincing)</strong> sebagai <strong>Data Analyst</strong> dan
+        <strong>Data Entry</strong>. Terlibat dalam proyek perancangan sistem web, analisis algoritma, dan pengembangan
+        perangkat lunak.
+      </p>
+    </section>
+
+<!-- organisasi -->
+  <section id="organization" class="mb-12">
+      <h2 class="text-2xl font-bold text-primary text-center mb-4">Organizational Experience</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-center">
+        <li class="bg-[theme('colors.panel')] border border-primary rounded p-4">Anggota Divisi Acara <strong>CITE UP 2024</strong></li>
+        <li class="bg-[theme('colors.panel')] border border-primary rounded p-4">Ketua Divisi Acara <strong>PEMIRA 2024</strong></li>
+        <li class="bg-[theme('colors.panel')] border border-primary rounded p-4">Ketua Divisi Acara <strong>CITE UP 2025</strong></li>
+      </ul>
+    </section>
+
+<!-- kontak -->
+  <section id="contact" class="mb-12">
+      <h2 class="text-2xl font-bold text-primary text-center mb-6">Contact Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+      <!-- Nama -->
+      <div>
+          <form>
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-neutral-200 mb-1">Nama Lengkap</label>
+              <input id="name" type="text" placeholder="Masukkan nama Anda"
+                     class="w-full bg-[theme('colors.panel')] border border-primary rounded px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+
+      <!-- Email -->
+      <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-neutral-200 mb-1">Alamat Email</label>
+              <input id="email" type="email" placeholder="Masukkan email Anda"
+                     class="w-full bg-[theme('colors.panel')] border border-primary rounded px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+
+      <!-- Pesan -->
+      <div class="mb-4">
+              <label for="message" class="block text-sm font-medium text-neutral-200 mb-1">Pesan</label>
+              <textarea id="message" rows="4" placeholder="Tulis pesan Anda..."
+                        class="w-full bg-[theme('colors.panel')] border border-primary rounded px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+            </div>
+
+      <!-- Tombol -->
+      <button type="submit" class="w-full bg-primary hover:bg-[#ff6b81] text-white font-semibold rounded py-2">Kirim</button>
+          </form>
+        </div>
+
+    <!-- Info Kontak -->
+    <div class="flex flex-col justify-center bg-[theme('colors.panel')] border border-primary rounded p-4">
+          <h3 class="font-semibold text-lg text-primary mb-2">Informasi Kontak</h3>
+          <p class="text-neutral-300"><strong>Email:</strong> <a class="text-primary" href="mailto:firstasyahputri29@gmail.com">firstasyahputri29@gmail.com</a></p>
+          <p class="text-neutral-300 mt-2"><strong>Telepon:</strong> <a class="text-primary" href="tel:087873460450">087873460450</a></p>
+          <p class="text-neutral-400 mt-4">Terbuka untuk proyek freelance, kolaborasi, dan diskusi teknologi.</p>
+        </div>
+  </div>
+</section>
+
+</main>
+
+  <footer class="bg-[theme('colors.panel')] border-t-2 border-primary text-center text-neutral-300 py-6">
+    <p>&copy; 2025 Firsta Khory Syahputri</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    toggleBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', (!expanded).toString());
+    });
+  </script>
+
+
+</body>
+</html>
